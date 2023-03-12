@@ -28,17 +28,12 @@ body {
 	display: block;
 	height: 0.1em;
 	width: 70%;
-	background-color: gray;
+	background-color: rgb(160, 160, 160);
 }
 
 .accordion-container{
-<<<<<<< HEAD:cssBayan/style.css
-	padding: 2rem 7rem 2rem 7rem;
-	background-color: #9f9f9f;
-=======
 	padding: 2rem;
-	background-color: #d0d0d0;
->>>>>>> parent of 3a78a68 (feat: fix bags and add new img (Mon, Mar 13, 2023 00:01:56 PM)):style.css
+	background-color: #9f9f9f;
   margin: 0 auto;
 	margin-top: 5rem;
   margin-bottom: 5rem;
@@ -49,7 +44,7 @@ body {
 }
 
 .accordion-meme__content{
-	width:70%;
+	width:50%;
 	margin: 0 auto;
 }
 .meme__image{
@@ -94,7 +89,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #e2d2c3;
 }
 
 .accordion__input {
@@ -109,6 +103,8 @@ body {
 	font-size: 2rem;
   font-family: "Quicksand", sans-serif;
 	transition: all 0.5s;
+	color: rgb(255, 255, 255);
+	text-shadow: 1px 1px 1px #000;
 }
 
 
@@ -128,32 +124,35 @@ body {
 
 .accordion__input:checked+.accordion-label .meme-text {
 	color: rgb(148, 71, 20);
+	text-shadow: none;
 }
 
 .accordion__input:checked+.accordion-label .label-icon {
 	opacity: 1;
 	rotate: 45deg;
 }
-.accordion__input:hover+.accordion-label .label-icon {
-	rotate: 45deg;
-}
 
-.accordion-container:hover .label-icon {
-	opacity: 1;
-}
-.accordion-container:hover .meme-text {
-	color: aqua;
-}
-.accordion__input:hover+.accordion-label .meme__image {
-	height: auto;
-	padding-bottom: 1.5rem;
-	opacity: 1;
-	scale: 1;
-}
+
+
+
 
 
 @media (min-width: 1000px) {
-
+	.accordion__input:hover+.accordion-label .label-icon {
+		rotate: 45deg;
+	}
+	.accordion-container:hover .label-icon {
+		opacity: 1;
+	}
+	.accordion-container:hover .meme-text {
+		color: rgb(0, 0, 0);
+	}
+	.accordion__input:hover+.accordion-label .meme__image {
+		height: auto;
+		padding-bottom: 1.5rem;
+		opacity: 1;
+		scale: 1;
+	}
 
 	.accordion-container{
 		max-width: 70vw;
@@ -176,7 +175,6 @@ body {
 	}
 
 	.accordion-container{
-		padding: 2rem;
 		max-width: 70vw;
 	}
 
@@ -186,7 +184,7 @@ body {
 	}
 
 	.text-logo{
-		font-size: 3rem;
+		font-size: 2.5rem;
 
 	}
 	.meme-text {
@@ -197,8 +195,11 @@ body {
 
 @media (max-width: 700px) {
 	.accordion-container{
-		padding: 2rem;
-		max-width: 90vw;
+		max-width: 80vw;
+	}
+
+	.accordion-heder__title{
+		padding-bottom: 1rem;
 	}
 
 	.label-icon {
@@ -209,43 +210,41 @@ body {
 	}
 
 	.text-logo{
-		font-size: 2.5rem;
+		font-size: 2rem;
 
 	}
 	.meme-text {
 		font-size: 1.6rem;
+		text-shadow: none;
 	}
 }
 
 
 @media (max-width: 400px) {
+	.accordion__input:checked+.accordion-label .meme__image{
+		padding-bottom: 0.5rem;
+	}
 
 	.accordion-container{
-		padding: 2rem;
 		max-width: 99vw;
+	}
+	.accordion-heder__title{
+		padding-bottom: 0.5rem;
 	}
 
 	.label-icon {
-		height: 1.8vh;
-		width: 1.8vh;
+		height: 1.5vh;
+		width: 1.5vh;
 		opacity: 1;
 		transition: opacity, rotate, 0.2s;
 	}
 	.text-logo{
-<<<<<<< HEAD:cssBayan/style.css
-		font-size: 1.7rem;
-
-	}
-	.meme-text {
-		font-size: 1.2rem;
-		text-shadow: none;
-=======
-		font-size: 2.2rem;
-
-	}
-	.meme-text {
 		font-size: 1.5rem;
->>>>>>> parent of 3a78a68 (feat: fix bags and add new img (Mon, Mar 13, 2023 00:01:56 PM)):style.css
+
+	}
+	.meme-text {
+		font-size: 1rem;
+		text-shadow: none;
 	}
 }
 
