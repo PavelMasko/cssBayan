@@ -2,6 +2,16 @@
 	box-sizing: border-box;
 	padding: 0;
 }
+.wrapper{
+    background-color: #e2d2c3;
+    margin: 0 auto;
+    margin-bottom: 5vh;
+    max-width: 70%;
+    box-shadow: 0 0 2em rgb(8 8 8 / 20%);
+    border-radius: 0 0 0.75rem 0.75rem;
+    overflow: hidden;
+    font-family: "Quicksand", sans-serif;
+}
 
 .line {
     display: block;
@@ -11,4 +21,18 @@
 }
 .accordion__input {
   display: none;
+}
+
+.accordion-heder__title{
+	
+	display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label-icon {
+	height: 3vh;
+	width: 3vh;
+	/* opacity: 0; */
+	transition: opacity, rotate, 0.4s;
 }
