@@ -1,0 +1,14 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+.line {
+    display: block;
+    height: 0.1em;
+    width: 70%;
+    background-color: gray;
+}
+.accordion__input {
+  display: none;
+}
