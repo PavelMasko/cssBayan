@@ -1,0 +1,302 @@
+* {
+	outline: none;
+	box-sizing: border-box;
+	padding: 0;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+body {
+	background: #303030;
+}
+
+svg {
+  display: block;
+  width: 20px;
+	rotate: 45deg;
+}
+
+svg line {
+  stroke: #000;
+  stroke-width: 5;
+}
+
+.wrapper{
+	margin: 0 auto;
+	max-height: 100%;
+	overflow: hidden;
+}
+
+.line {
+	display: block;
+	height: 0.1em;
+	width: 80%;
+}
+
+.accordion-container{
+	box-shadow: 0 0 2em rgba(255, 255, 255, 0.3);
+	padding: 2rem 7rem 2rem 7rem;
+	max-width: 70vw;
+	background-color: #ffffff;
+	border-radius: 1rem;
+  margin: 0 auto;
+	margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.accordion-heder__title{
+	padding-bottom: 2rem;;
+}
+
+.accordion-meme__content{
+	width:70%;
+	margin: 0 auto;
+}
+.meme__image{
+	display: block;
+  width: 100%;
+  height: 0;
+  margin: 0 auto;
+  padding-bottom: 0;
+  opacity: 0;
+  scale: 0;
+  transition: all 0.5s ease-out;
+}
+
+.accordion-label,
+.header-accordion {
+  padding: 0.4rem;
+}
+
+.accordion__label {
+  display: block;
+  color: #7a5a5a;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.accordion-heder__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label-icon {
+	margin-left: 1rem;
+	fill: #5046e5;
+	opacity: 0;
+	transition: all 1s;
+}
+
+.accordion-meme__conten {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accordion__input {
+  display: none;
+}
+
+.text-logo{
+	font-size: 4rem;
+	transition: all 0.5s;
+}
+.meme-text {
+	font-size: 2rem;
+  font-family: "Quicksand", sans-serif;
+	transition: all 0.5s;
+	color: red;
+	text-shadow: 0.05rem 0.05rem 0.05rem #ffffff;
+}
+
+.accordion-heder__title{
+	display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion__input:checked+.accordion-label .meme__image {
+	height: auto;
+	padding-bottom: 1.5rem;
+	opacity: 1;
+	scale: 1;
+}
+
+.accordion__input:checked+.accordion-label .meme-text {
+	color: rgb(0, 0, 0);
+	text-shadow: none;
+}
+
+.accordion__input:checked+.accordion-label .label-icon {
+	/* opacity: 1; */
+	rotate: 45deg;
+}
+
+.accordion__input:hover .accordion-label .label-icon {
+	rotate: 45deg;
+}
+
+.accordion-container:hover .label-icon {
+	opacity: 1;
+}
+
+.accordion-container:hover .meme-text {
+	text-shadow: none;
+	color: rgb(0, 0, 0);
+}
+
+.accordion__input:hover+.accordion-label .meme__image {
+	height: auto;
+	padding-bottom: 1.5rem;
+	opacity: 1;
+	scale: 1;
+}
+
+.accordion__wrapper:active> .accordion-label .accordion-heder__title .meme-text {
+	color: red;
+	text-shadow: none;
+}
+.accordion__wrapper:active> .accordion-label .accordion-heder__title .label-icon{
+	rotate: 45deg;
+	transition: all 0.5s ease-out;
+}
+.accordion__wrapper:active> .accordion-label .accordion-heder__title .label-icon .l_C{
+	stroke: red;
+	fill: #090;
+}
+.accordion__wrapper:active> .accordion-label .accordion-meme__content .meme__image{
+	filter: brightness(130%);
+}
+
+.line,
+.main-wrapper,
+.accordion__wrapper,
+.accordion-label {
+	cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+	.accordion__input:checked+ .meme__image {
+		padding-bottom: 0.5rem;
+	}
+
+	.label-icon {
+		opacity: 1;
+		transition: opacity, rotate, 0.2s;
+	}
+
+	.accordion-container{
+		padding: 2rem 2rem 2rem 2rem;
+		max-width: 70vw;
+	}
+
+	.text-logo{
+		font-size: 2.5rem;
+	}
+
+	.meme-text {
+		font-size: 1.7rem;
+	}
+	.accordion-container:hover .meme-text {
+		text-shadow: none;
+		color: red;
+	}
+}
+
+@media (max-width: 700px) {
+	.accordion-container{
+		padding: 2rem;
+		max-width: 80vw;
+	}
+
+	.accordion-heder__title{
+		padding-bottom: 1rem;
+	}
+
+	.accordion-meme__content{
+		width:80%;
+		margin: 0 auto;
+	}
+
+	.label-icon {
+		height: 2vh;
+		width: 2vh;
+		opacity: 1;
+		transition: opacity, rotate, 0.2s;
+	}
+
+	.text-logo{
+		font-size: 2rem;
+	}
+
+	.meme-text {
+		font-size: 1.6rem;
+		text-shadow: none;
+	}
+	.accordion-container:hover .meme-text {
+		text-shadow: none;
+		color: rgb(0, 0, 0);
+	}
+}
+
+@media (max-width: 400px) {
+	.accordion__input:checked+.accordion-label .meme__image{
+		padding-bottom: 0.5rem;
+	}
+
+	.accordion-container{
+		padding: 2rem;
+		max-width: 99vw;
+	}
+
+	.accordion-heder__title{
+		padding-bottom: 0.5rem;
+	}
+
+	.accordion-meme__content{
+		width:90%;
+		margin: 0 auto;
+	}
+
+	.label-icon {
+		height: 1.8vh;
+		width: 1.8vh;
+		opacity: 1;
+		transition: opacity, rotate, 0.2s;
+	}
+
+	.text-logo{
+		font-size: 1.5rem;
+	}
+
+	.meme-text {
+		font-size: 1.3rem;
+		text-shadow: none;
+	}
+	.accordion-container:hover .meme-text {
+		text-shadow: none;
+		color: red;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
